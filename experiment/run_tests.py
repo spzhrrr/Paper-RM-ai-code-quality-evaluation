@@ -1,5 +1,5 @@
 import importlib.util
-import os
+import csv
 
 models = ["chatgpt", "claude", "copilot"]
 
@@ -30,14 +30,26 @@ def run_test(func):
     except:
         return False
 
-results = {}
+results = []
 
 for model in models:
-    path = f"{model}/solution.py"
-    func = load_function(path)
-    result = run_test(func)
-    results[model] = result
+    func = load_function(f"{model}/solution.py")
+    passed = 1 if run_test(func) else 0
+    total = 1
+    pass_rate = passed / total
 
-print("RESULTS:")
-for model, res in results.items():
-    print(f"{model}: {'PASS' if res else 'FAIL'}")
+    results.append([model, "is_prime", passed, total, pass_rate])
+
+# PRINT TABLE (FOR LOG)
+print(f"{'Model':<10} {'Passed':<10} {'Total':<10} {'Pass Rate':<10}")
+print("-" * 40)
+for r in results:
+    print(f"{r[0]:<10} {r[2]:<10} {r[3]:<10} {r[4]*100:.1f}%")
+
+# SAVE CSV (IMPORTANT)
+with open("../results/metrics.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["model", "task", "passed", "total", "pass_rate"])
+    writer.writerows(results)
+
+print("\nSaved to results/metrics.csv")
