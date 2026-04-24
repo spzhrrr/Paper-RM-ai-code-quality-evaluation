@@ -23,14 +23,12 @@ def run_test(func):
     if func(9) is False:
         passed += 1
     return passed, total
-
 results = []
 
 for model in models:
     func = load_function(f"{model}/solution.py")
     passed, total = run_test(func)
     pass_rate = round(passed / total, 2)
-
     results.append([model, "is_prime", passed, total, pass_rate])
 
 print("RESULTS:")
