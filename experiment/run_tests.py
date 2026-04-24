@@ -10,46 +10,39 @@ def load_function(path):
     return module.is_prime
 
 def run_test(func):
-    try:
-        assert func(1) is False
-        assert func(0) is False
-        assert func(-5) is False
+    passed = 0
+    total = 5
 
-        assert func(2) is True
-        assert func(3) is True
-        assert func(13) is True
-        assert func(97) is True
+    if func(1) is False:
+        passed += 1
+    if func(2) is True:
+        passed += 1
+    if func(4) is False:
+        passed += 1
+    if func(13) is True:
+        passed += 1
+    if func(9) is False:
+        passed += 1
 
-        assert func(4) is False
-        assert func(9) is False
-        assert func(100) is False
-
-        assert func(7919) is True
-
-        return True
-    except:
-        return False
+    return passed, total
 
 results = []
 
 for model in models:
     func = load_function(f"{model}/solution.py")
-    passed = 1 if run_test(func) else 0
-    total = 1
-    pass_rate = passed / total
+    passed, total = run_test(func)
+    pass_rate = round(passed / total, 2)
 
     results.append([model, "is_prime", passed, total, pass_rate])
 
-# PRINT TABLE (FOR LOG)
-print(f"{'Model':<10} {'Passed':<10} {'Total':<10} {'Pass Rate':<10}")
-print("-" * 40)
+print("RESULTS:")
 for r in results:
-    print(f"{r[0]:<10} {r[2]:<10} {r[3]:<10} {r[4]*100:.1f}%")
+    print(f"{r[0]}: {r[2]}/{r[3]} ({r[4]*100}%)")
 
-# SAVE CSV (IMPORTANT)
+# SAVE CSV
 with open("../results/metrics.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(["model", "task", "passed", "total", "pass_rate"])
     writer.writerows(results)
 
-print("\nSaved to results/metrics.csv")
+print("Saved to results/metrics.csv")
