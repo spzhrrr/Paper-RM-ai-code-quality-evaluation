@@ -12,7 +12,6 @@ def load_function(path):
 def run_test(func):
     passed = 0
     total = 5
-
     if func(1) is False:
         passed += 1
     if func(2) is True:
@@ -23,7 +22,6 @@ def run_test(func):
         passed += 1
     if func(9) is False:
         passed += 1
-
     return passed, total
 
 results = []
