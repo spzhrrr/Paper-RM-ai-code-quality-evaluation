@@ -1,0 +1,4 @@
+model,fc_mean_norm,cr_mean_norm,ef_mean_norm,ma_mean_norm,cqs_equal_25,sa_FC_dominant_10pct,sa_FC_dominant_25pct,sa_FC_dominant_40pct,sa_FC_dominant_55pct,sa_CR_dominant_10pct,sa_CR_dominant_25pct,sa_CR_dominant_40pct,sa_CR_dominant_55pct,sa_EF_dominant_10pct,sa_EF_dominant_25pct,sa_EF_dominant_40pct,sa_EF_dominant_55pct,sa_MA_dominant_10pct,sa_MA_dominant_25pct,sa_MA_dominant_40pct,sa_MA_dominant_55pct
+ChatGPT,0.97,0.7448,0.4398,0.75,0.7262,0.7212,0.7262,0.7313,0.7363,0.7437,0.7262,0.7087,0.6912,0.6787,0.7262,0.7737,0.8212,0.7312,0.7262,0.7212,0.7163
+Claude,1.0,0.8912,1.0,1.0,0.9728,0.9699,0.9728,0.9757,0.9786,0.9786,0.9728,0.9670,0.9612,0.9699,0.9728,0.9757,0.9786,0.9699,0.9728,0.9757,0.9786
+GitHub_Copilot,0.97,0.6348,0.0702,0.6667,0.5854,0.5951,0.5854,0.5757,0.5660,0.5658,0.5854,0.6050,0.6247,0.5108,0.5854,0.6600,0.7346,0.5858,0.5854,0.5850,0.5846
