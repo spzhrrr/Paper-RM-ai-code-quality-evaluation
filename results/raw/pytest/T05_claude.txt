@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.1.1, pluggy-1.4.0
+rootdir: /path/to/ai-code-quality-study
+collected 10 items
+
+tests/test_cases.py::TestT05_AggregateCSV 
+tests/test_cases.py::TestT05_AggregateCSV::test_01 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_02 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_03 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_04 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_05 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_06 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_07 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_08 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_09 PASSED
+tests/test_cases.py::TestT05_AggregateCSV::test_10 PASSED
+
+============================== 10 passed in 0.30s ==============================

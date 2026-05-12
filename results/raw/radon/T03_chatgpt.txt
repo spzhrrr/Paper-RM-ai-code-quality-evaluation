@@ -1,0 +1,4 @@
+solutions/T03/chatgpt.py
+    F 2:4 main_function - A (2)
+
+Average complexity: A (2.0)

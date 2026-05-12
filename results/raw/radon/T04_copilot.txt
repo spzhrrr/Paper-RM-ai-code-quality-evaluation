@@ -1,0 +1,4 @@
+solutions/T04/copilot.py
+    F 2:4 main_function - A (1)
+
+Average complexity: A (1.0)

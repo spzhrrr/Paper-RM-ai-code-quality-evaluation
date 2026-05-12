@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.1.1, pluggy-1.4.0
+rootdir: /path/to/ai-code-quality-study
+collected 10 items
+
+tests/test_cases.py::TestT08_MergeSort 
+tests/test_cases.py::TestT08_MergeSort::test_01 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_02 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_03 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_04 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_05 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_06 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_07 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_08 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_09 PASSED
+tests/test_cases.py::TestT08_MergeSort::test_10 FAILED
+
+========================= 9 passed, 1 failed in 0.30s ==========================

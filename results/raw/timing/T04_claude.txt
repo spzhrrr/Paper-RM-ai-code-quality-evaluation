@@ -1,0 +1,6 @@
+# timeit benchmark — solutions/T04/claude.py
+# Python 3.11.9 | platform: linux
+# iterations : 5000
+# total time : 0.039060 s
+# mean time  : 0.007812 ms
+# std dev    : 0.000312 ms  (estimated ~4%)

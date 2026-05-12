@@ -1,0 +1,4 @@
+solutions/T09/claude.py
+    F 2:4 main_function - A (3)
+
+Average complexity: A (3.0)

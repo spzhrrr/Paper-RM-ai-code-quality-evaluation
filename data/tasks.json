@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "total_tasks": 10,
+    "language": "Python 3.11"
+  },
+  "tasks": [
+    {
+      "task_id": "T01",
+      "task_name": "Prime Number Check",
+      "difficulty": "Easy",
+      "domain": "Mathematics",
+      "standardized_prompt": "Write a Python function to check whether a given integer is a prime number. The function must accept a single non-negative integer n and return True if n is prime and False otherwise. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "is_prime(n: int) -> bool",
+        "normal_cases": {
+          "7": true,
+          "12": false,
+          "97": true
+        },
+        "edge_cases": {
+          "0": false,
+          "1": false,
+          "2": true
+        },
+        "complexity_expectation": "O(sqrt(n))"
+      }
+    },
+    {
+      "task_id": "T02",
+      "task_name": "String Reversal Without Built-ins",
+      "difficulty": "Easy",
+      "domain": "String",
+      "standardized_prompt": "Write a Python function to reverse a string without using built-in reverse methods (do not use slicing [::-1] or reversed()). The function must accept a single string s and return the reversed string. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "reverse_string(s: str) -> str",
+        "normal_cases": {
+          "hello": "olleh",
+          "Python": "nohtyP"
+        },
+        "edge_cases": {
+          "": "",
+          "a": "a",
+          "racecar": "racecar"
+        },
+        "complexity_expectation": "O(n)"
+      }
+    },
+    {
+      "task_id": "T03",
+      "task_name": "Temperature Converter",
+      "difficulty": "Easy",
+      "domain": "Conversion",
+      "standardized_prompt": "Write a Python function to convert temperature values across Celsius, Fahrenheit, and Kelvin. The function must accept a float value and two strings source_unit and target_unit (each being 'C', 'F', or 'K') and return a float rounded to 2 decimal places. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "convert_temperature(value: float, source_unit: str, target_unit: str) -> float",
+        "normal_cases": {
+          "convert_temperature(0,'C','F')": 32.0,
+          "convert_temperature(100,'C','K')": 373.15,
+          "convert_temperature(32,'F','C')": 0.0
+        },
+        "edge_cases": {
+          "same_unit": "returns value unchanged",
+          "convert_temperature(-40,'C','F')": -40.0
+        },
+        "complexity_expectation": "O(1)"
+      }
+    },
+    {
+      "task_id": "T04",
+      "task_name": "Binary Search",
+      "difficulty": "Medium",
+      "domain": "Algorithm",
+      "standardized_prompt": "Write a Python function to implement binary search on a sorted list. The function must accept a sorted list of integers arr and a target integer, and return the index of the target in arr, or -1 if not found. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "binary_search(arr: list, target: int) -> int",
+        "normal_cases": {
+          "binary_search([1,3,5,7,9], 5)": 2,
+          "binary_search([1,3,5,7,9], 1)": 0
+        },
+        "edge_cases": {
+          "empty_list": -1,
+          "target_not_found": -1,
+          "single_element_match": 0
+        },
+        "complexity_expectation": "O(log n)"
+      }
+    },
+    {
+      "task_id": "T05",
+      "task_name": "CSV Aggregator",
+      "difficulty": "Medium",
+      "domain": "File I/O",
+      "standardized_prompt": "Write a Python function to parse a CSV file and aggregate numeric data by group. The function must accept a file path string to a CSV file with columns 'group' (string) and 'value' (float), and return a dict mapping each group name to its total summed value rounded to 2 decimal places. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "aggregate_csv(filepath: str) -> dict",
+        "normal_cases": "CSV with groups A, B, C → dict with summed values",
+        "edge_cases": {
+          "empty_csv": "returns empty dict {}",
+          "single_row": "dict with one group",
+          "negative_values": "correctly sums negative floats"
+        },
+        "complexity_expectation": "O(n)"
+      }
+    },
+    {
+      "task_id": "T06",
+      "task_name": "Linked List Stack",
+      "difficulty": "Medium",
+      "domain": "Data Structure",
+      "standardized_prompt": "Write a Python class to implement a stack data structure using a linked list (not Python's built-in list). The class must support push(value), pop(), peek(), is_empty(), and size() methods. pop() and peek() should raise IndexError on empty stack. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "class_name": "Stack",
+        "interface": [
+          "push(value)",
+          "pop() -> value",
+          "peek() -> value",
+          "is_empty() -> bool",
+          "size() -> int"
+        ],
+        "edge_cases": {
+          "pop_empty": "raises IndexError",
+          "peek_empty": "raises IndexError"
+        },
+        "complexity_expectation": "O(1) per operation"
+      }
+    },
+    {
+      "task_id": "T07",
+      "task_name": "Breadth-First Search",
+      "difficulty": "Medium",
+      "domain": "Graph",
+      "standardized_prompt": "Write a Python function to perform breadth-first search (BFS) on a graph represented as an adjacency list. The function must accept a dict graph and a start node and return a list of nodes in BFS traversal order. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "bfs(graph: dict, start) -> list",
+        "normal_cases": "BFS order from start node, no duplicates",
+        "edge_cases": {
+          "single_node": [
+            "start"
+          ],
+          "disconnected_component": "only reachable nodes returned",
+          "cycle": "each node appears exactly once"
+        },
+        "complexity_expectation": "O(V + E)"
+      }
+    },
+    {
+      "task_id": "T08",
+      "task_name": "Merge Sort",
+      "difficulty": "Hard",
+      "domain": "Algorithm",
+      "standardized_prompt": "Write a Python function to implement merge sort. The function must accept a list of comparable elements arr and return a new sorted list in ascending order. Include docstring comments documenting the time complexity. Do not include explanations outside the code; provide only the code.",
+      "expected_behavior": {
+        "function_signature": "merge_sort(arr: list) -> list",
+        "normal_cases": "returns sorted list in ascending order",
+        "edge_cases": {
+          "empty": [],
+          "single_element": "same element",
+          "already_sorted": "unchanged",
+          "all_duplicates": "all elements present"
+        },
+        "complexity_expectation": "O(n log n)",
+        "additional_requirement": "docstring must state time complexity"
+      }
+    },
+    {
+      "task_id": "T09",
+      "task_name": "Inventory Management System",
+      "difficulty": "Hard",
+      "domain": "OOP",
+      "standardized_prompt": "Write a Python class to implement an inventory management system with full CRUD operations. The class InventoryManager must support: add_item(name, quantity, price), get_item(name) returning a dict or None, update_item(name, quantity=None, price=None) raising KeyError if not found, delete_item(name) raising KeyError if not found, and list_items() returning a list of all item dicts. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "class_name": "InventoryManager",
+        "interface": [
+          "add_item(name, quantity, price)",
+          "get_item(name) -> dict|None",
+          "update_item(name, quantity=None, price=None)",
+          "delete_item(name)",
+          "list_items() -> list"
+        ],
+        "edge_cases": {
+          "update_missing": "raises KeyError",
+          "delete_missing": "raises KeyError",
+          "get_missing": "returns None"
+        },
+        "complexity_expectation": "O(1) per operation"
+      }
+    },
+    {
+      "task_id": "T10",
+      "task_name": "LRU Cache",
+      "difficulty": "Hard",
+      "domain": "Data Structure",
+      "standardized_prompt": "Write a Python class to implement an LRU (Least Recently Used) cache using a dictionary and collections.deque. The class LRUCache must accept capacity in its constructor and support get(key) returning the value or -1 if absent, and put(key, value) which inserts the key-value pair and evicts the least recently used item if capacity is exceeded. Do not include explanations; provide only the code.",
+      "expected_behavior": {
+        "class_name": "LRUCache",
+        "interface": [
+          "__init__(capacity: int)",
+          "get(key: int) -> int",
+          "put(key: int, value: int) -> None"
+        ],
+        "edge_cases": {
+          "capacity_one": "every put evicts previous",
+          "update_existing": "does not increase size",
+          "get_refreshes_recency": "refreshed item not evicted next"
+        },
+        "complexity_expectation": "O(1) for get/put (deque.remove is O(n) — acknowledged limitation)"
+      }
+    }
+  ]
+}

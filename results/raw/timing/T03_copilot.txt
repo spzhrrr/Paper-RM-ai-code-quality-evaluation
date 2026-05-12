@@ -1,0 +1,6 @@
+# timeit benchmark — solutions/T03/copilot.py
+# Python 3.11.9 | platform: linux
+# iterations : 10000
+# total time : 0.014120 s
+# mean time  : 0.001412 ms
+# std dev    : 0.000056 ms  (estimated ~4%)

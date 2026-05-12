@@ -1,0 +1,8 @@
+************* Module solutions.T04.copilot
+solutions/T04/copilot.py:X:0: C0114: Missing module docstring (missing-module-docstring)
+solutions/T04/copilot.py:X:0: C0116: Missing function or method docstring (missing-function-docstring)
+solutions/T04/copilot.py:X:0: W0611: Unused import (unused-import)
+solutions/T04/copilot.py:X:0: C0103: Variable name doesn't conform to snake_case naming style (invalid-name)
+
+-------------------------------------------------------------------
+Your code has been rated at 6.78/10 (previous run: 6.73/10, +0.05)

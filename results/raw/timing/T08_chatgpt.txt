@@ -1,0 +1,6 @@
+# timeit benchmark — solutions/T08/chatgpt.py
+# Python 3.11.9 | platform: linux
+# iterations : 1000
+# total time : 1.234100 s
+# mean time  : 1.234100 ms
+# std dev    : 0.049364 ms  (estimated ~4%)
